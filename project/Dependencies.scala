@@ -1,6 +1,5 @@
 import sbt._
 
-
 /**
   * Defines all the library dependencies.
   * All dependencies must be declared here.
@@ -29,4 +28,8 @@ object Dependencies {
     MongoDB.reactiveMongo,
     MongoDB.reactiveMongoPlayJson
   )
+
+  val etasClientApi = Seq(
+    Play.ws,
+    Play.cache)
 }

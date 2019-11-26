@@ -27,3 +27,17 @@ lazy val commonSettings = baseSettings
 
 lazy val etasCommon = (project in file("etas-common"))
   .settings(commonSettings, libraryDependencies ++= Dependencies.etasCommon)
+
+
+lazy val etasClientApi = (project in file("etas-client-api"))
+  .enablePlugins(play.sbt.PlayScala)
+  .settings(
+    libraryDependencies ++= Dependencies.etasClientApi)
+  .dependsOn(etasCommon)
+
+lazy val root = (project in file("."))
+  .aggregate(
+    etasCommon,
+    etasClientApi
+  )
+  .settings(commonSettings)
