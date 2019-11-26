@@ -2,7 +2,7 @@ scalariformSettings(autoformat = false)
 scalaVersion in ThisBuild := "2.11.11"
 
 lazy val baseSettings = Seq(
-  organization := "net.atos",
+  organization := "net.etas",
   scalaVersion := "2.11.11",
   scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked"),
   parallelExecution in Test := false,
